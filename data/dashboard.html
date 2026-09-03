@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SensoVision | Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="brand">SensoVision</div>
+        <nav class="nav">
+            <a class="active" href="/dashboard">Dashboard</a>
+            <a href="/network">Red</a>
+            <a href="/system">Sistema</a>
+            <a class="logout" href="/logout">Salir</a>
+        </nav>
+    </aside>
+    <main>
+        <header class="page-head">
+            <div>
+                <h1>Dashboard</h1>
+                <div class="muted">Estado general del dispositivo</div>
+            </div>
+            <div id="wifi-state"><span class="badge">Cargando...</span></div>
+        </header>
+
+        <section class="grid">
+            <article class="card metric"><span class="muted">SSID conectado</span><strong id="sta-ssid">-</strong></article>
+            <article class="card metric"><span class="muted">IP de estación</span><strong id="sta-ip">-</strong></article>
+            <article class="card metric"><span class="muted">Señal Wi-Fi</span><strong id="rssi">-</strong></article>
+            <article class="card metric"><span class="muted">IP del hotspot</span><strong id="ap-ip">-</strong></article>
+            <article class="card metric"><span class="muted">Uptime</span><strong id="uptime">-</strong></article>
+            <article class="card metric"><span class="muted">Heap libre</span><strong id="heap">-</strong></article>
+        </section>
+
+        <section class="card section">
+            <h2>Memoria</h2>
+            <div class="grid">
+                <div class="metric"><span class="muted">Flash</span><strong id="flash">-</strong></div>
+                <div class="metric"><span class="muted">PSRAM</span><strong id="psram">-</strong></div>
+                <div class="metric"><span class="muted">Sensores</span><strong>Preparado</strong><span class="muted">Añade aquí SHT45, SGP41 y SPS30.</span></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/dashboard.js"></script>
+</body>
+</html>

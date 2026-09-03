@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SensoVision | Red</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="brand">SensoVision</div>
+        <nav class="nav">
+            <a href="/dashboard">Dashboard</a>
+            <a class="active" href="/network">Red</a>
+            <a href="/system">Sistema</a>
+            <a class="logout" href="/logout">Salir</a>
+        </nav>
+    </aside>
+    <main>
+        <header class="page-head">
+            <div><h1>Configuración Wi-Fi</h1><div class="muted">Escanea y guarda una red disponible.</div></div>
+        </header>
+
+        <section class="card section">
+            <div class="actions">
+                <button id="scan" class="btn secondary" type="button">Escanear redes</button>
+                <span id="scan-message" class="muted"></span>
+            </div>
+
+            <form id="wifi-form" class="form-grid">
+                <label>
+                    Red inalámbrica
+                    <select id="ssid" name="ssid" required>
+                        <option value="">Seleccione una red</option>
+                    </select>
+                </label>
+                <label>
+                    Contraseña de la red
+                    <input name="password" type="password" autocomplete="new-password">
+                </label>
+                <div class="actions">
+                    <button class="btn" type="submit">Guardar y conectar</button>
+                </div>
+                <div id="connect-message" class="muted"></div>
+            </form>
+        </section>
+    </main>
+</div>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/network.js"></script>
+</body>
+</html>

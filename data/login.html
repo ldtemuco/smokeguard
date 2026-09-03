@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SensoVision | Acceso</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="login-shell">
+        <section class="card login-card">
+            <div class="brand">SensoVision</div>
+            <p class="muted">Panel embebido de configuración ESP32-S3</p>
+
+            <form id="login-form" class="form-grid">
+                <label>
+                    Usuario
+                    <input name="username" autocomplete="username" required>
+                </label>
+                <label>
+                    Contraseña
+                    <input name="password" type="password" autocomplete="current-password" required>
+                </label>
+                <button class="btn" type="submit">Ingresar</button>
+                <div id="message" class="error"></div>
+            </form>
+        </section>
+    </div>
+    <script src="/assets/js/login.js"></script>
+</body>
+</html>
